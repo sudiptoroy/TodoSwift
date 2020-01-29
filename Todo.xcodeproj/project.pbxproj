@@ -12,6 +12,7 @@
 		48015E3B23E1926400C1B288 /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3723E1926400C1B288 /* Tasks+CoreDataProperties.swift */; };
 		48015E3C23E1926400C1B288 /* Lists+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3823E1926400C1B288 /* Lists+CoreDataClass.swift */; };
 		48015E3D23E1926400C1B288 /* Lists+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3923E1926400C1B288 /* Lists+CoreDataProperties.swift */; };
+		48015E3F23E1A1C400C1B288 /* ListDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3E23E1A1C400C1B288 /* ListDetailsController.swift */; };
 		4813DDD023E18578000B6F60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813DDCF23E18578000B6F60 /* AppDelegate.swift */; };
 		4813DDD223E18578000B6F60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813DDD123E18578000B6F60 /* ViewController.swift */; };
 		4813DDD523E18578000B6F60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4813DDD323E18578000B6F60 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		48015E3723E1926400C1B288 /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		48015E3823E1926400C1B288 /* Lists+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lists+CoreDataClass.swift"; sourceTree = "<group>"; };
 		48015E3923E1926400C1B288 /* Lists+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lists+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		48015E3E23E1A1C400C1B288 /* ListDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailsController.swift; sourceTree = "<group>"; };
 		4813DDCC23E18577000B6F60 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4813DDCF23E18578000B6F60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4813DDD123E18578000B6F60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				48015E3923E1926400C1B288 /* Lists+CoreDataProperties.swift */,
 				4813DDCF23E18578000B6F60 /* AppDelegate.swift */,
 				4813DDD123E18578000B6F60 /* ViewController.swift */,
+				48015E3E23E1A1C400C1B288 /* ListDetailsController.swift */,
 				48015E3423E18F2000C1B288 /* PersistenceService.swift */,
 				4813DDD323E18578000B6F60 /* Main.storyboard */,
 				4813DDD923E1857B000B6F60 /* Assets.xcassets */,
@@ -223,6 +226,7 @@
 				4813DDD023E18578000B6F60 /* AppDelegate.swift in Sources */,
 				48015E3A23E1926400C1B288 /* Tasks+CoreDataClass.swift in Sources */,
 				48015E3C23E1926400C1B288 /* Lists+CoreDataClass.swift in Sources */,
+				48015E3F23E1A1C400C1B288 /* ListDetailsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

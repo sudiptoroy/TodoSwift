@@ -12,6 +12,8 @@ import CoreData
 class ViewController: UIViewController {
     
     var list = [Lists]()
+    var person = [Lists]()
+    var selectedList : Int = 0
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -43,6 +45,9 @@ class ViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    
+    
+
 
 
 }
@@ -67,14 +72,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(list[indexPath.row].list_name as Any)
-        //performSegue(withIdentifier: "showDetails", sender: self)
+        print(list[indexPath.row].child_tasks)
+        selectedList = indexPath.row
+        performSegue(withIdentifier: "showTasks", sender: self)
+
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? VideoDetailsController {
-//            destination.video = videos[(tableView.indexPathForSelectedRow?.row)!]
+//        if let destination = segue.destination as? ListDetailsController {
+//            //destination.video = videos[(tableView.indexPathForSelectedRow?.row)!]
+//            destination.
 //        }
 //    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let ListDetailsController = segue.destination as? ListDetailsController else {return}
+        ListDetailsController.list_name = list[selectedList]
+        
+    }
     
 }
 
