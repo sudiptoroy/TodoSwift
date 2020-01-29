@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         alert.addTextField { (textField) in
             textField.placeholder = "List name"
         }
-        let action = UIAlertAction(title: "Post", style: .default) { (_) in
+        let action = UIAlertAction(title: "Add", style: .default) { (_) in
             let name = alert.textFields!.first!.text!
             //let age = alert.textFields!.last!.text!
             let item = Lists(context: PersistenceService.context)
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -63,6 +63,18 @@ extension ViewController: UITableViewDataSource {
         //cell.detailTextLabel?.text = ""
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(list[indexPath.row].list_name as Any)
+        //performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? VideoDetailsController {
+//            destination.video = videos[(tableView.indexPathForSelectedRow?.row)!]
+//        }
+//    }
     
 }
 
