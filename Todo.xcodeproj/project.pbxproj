@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48015E3523E18F2000C1B288 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3423E18F2000C1B288 /* PersistenceService.swift */; };
+		48015E3A23E1926400C1B288 /* Tasks+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3623E1926400C1B288 /* Tasks+CoreDataClass.swift */; };
+		48015E3B23E1926400C1B288 /* Tasks+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3723E1926400C1B288 /* Tasks+CoreDataProperties.swift */; };
+		48015E3C23E1926400C1B288 /* Lists+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3823E1926400C1B288 /* Lists+CoreDataClass.swift */; };
+		48015E3D23E1926400C1B288 /* Lists+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48015E3923E1926400C1B288 /* Lists+CoreDataProperties.swift */; };
 		4813DDD023E18578000B6F60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813DDCF23E18578000B6F60 /* AppDelegate.swift */; };
 		4813DDD223E18578000B6F60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813DDD123E18578000B6F60 /* ViewController.swift */; };
 		4813DDD523E18578000B6F60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4813DDD323E18578000B6F60 /* Main.storyboard */; };
@@ -27,6 +32,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		48015E3423E18F2000C1B288 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		48015E3623E1926400C1B288 /* Tasks+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataClass.swift"; sourceTree = "<group>"; };
+		48015E3723E1926400C1B288 /* Tasks+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tasks+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		48015E3823E1926400C1B288 /* Lists+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lists+CoreDataClass.swift"; sourceTree = "<group>"; };
+		48015E3923E1926400C1B288 /* Lists+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lists+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4813DDCC23E18577000B6F60 /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4813DDCF23E18578000B6F60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4813DDD123E18578000B6F60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,8 +89,13 @@
 		4813DDCE23E18577000B6F60 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				48015E3623E1926400C1B288 /* Tasks+CoreDataClass.swift */,
+				48015E3723E1926400C1B288 /* Tasks+CoreDataProperties.swift */,
+				48015E3823E1926400C1B288 /* Lists+CoreDataClass.swift */,
+				48015E3923E1926400C1B288 /* Lists+CoreDataProperties.swift */,
 				4813DDCF23E18578000B6F60 /* AppDelegate.swift */,
 				4813DDD123E18578000B6F60 /* ViewController.swift */,
+				48015E3423E18F2000C1B288 /* PersistenceService.swift */,
 				4813DDD323E18578000B6F60 /* Main.storyboard */,
 				4813DDD923E1857B000B6F60 /* Assets.xcassets */,
 				4813DDDB23E1857B000B6F60 /* LaunchScreen.storyboard */,
@@ -201,8 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4813DDD223E18578000B6F60 /* ViewController.swift in Sources */,
+				48015E3523E18F2000C1B288 /* PersistenceService.swift in Sources */,
+				48015E3B23E1926400C1B288 /* Tasks+CoreDataProperties.swift in Sources */,
+				48015E3D23E1926400C1B288 /* Lists+CoreDataProperties.swift in Sources */,
 				4813DDD823E18578000B6F60 /* Todo.xcdatamodeld in Sources */,
 				4813DDD023E18578000B6F60 /* AppDelegate.swift in Sources */,
+				48015E3A23E1926400C1B288 /* Tasks+CoreDataClass.swift in Sources */,
+				48015E3C23E1926400C1B288 /* Lists+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
