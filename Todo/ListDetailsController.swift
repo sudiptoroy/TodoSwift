@@ -22,10 +22,30 @@ class ListDetailsController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(list_name)
         // Do any additional setup after loading the view.
         
         
+    }
+    @IBAction func onPlusTapped () {
+        let alert = UIAlertController(title: "Add a task", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Task name"
+        }
+        let action = UIAlertAction(title: "Add", style: .default) { (_) in
+            let name = alert.textFields!.first!.text!
+            //let age = alert.textFields!.last!.text!
+            let task = Tasks(context: PersistenceService.context)
+            task.task_name = name
+            task.parent_list = self.list_name
+            self.list_name.addToChild_tasks(task)
+            
+            PersistenceService.saveContext()
+            //self.list.append(item)
+            self.tableView.reloadData()
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

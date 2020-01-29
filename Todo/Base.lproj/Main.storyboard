@@ -72,7 +72,11 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Tasks" id="OnO-LB-tEY">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J2K-53-XcL"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J2K-53-XcL">
+                                            <connections>
+                                                <action selector="onPlusTapped" destination="vkM-vw-hiU" id="d8v-SK-uQJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
