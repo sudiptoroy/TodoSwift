@@ -19,10 +19,12 @@ class ListDetailsController: UIViewController, UITableViewDelegate, UITableViewD
     var list = Lists (context: PersistenceService.context)
     var numberOfCellsTable:Int = 0
     
-
+    @IBOutlet weak var showListLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print(list)
+        //showListLabel.text = list as? String
         // Do any additional setup after loading the view.
     }
     
@@ -42,7 +44,7 @@ class ListDetailsController: UIViewController, UITableViewDelegate, UITableViewD
             PersistenceService.saveContext()
             //self.list.append(item)
 //            self.tableView.reloadData()
-            DispatchQueue.main.async {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                 self.tableView.reloadData()
             }
         }

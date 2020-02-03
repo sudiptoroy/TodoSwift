@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G9016" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Lists" representedClassName="Lists" syncable="YES">
-        <attribute name="list_name" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>
-        <relationship name="child_tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tasks" inverseName="parent_list" inverseEntity="Tasks" syncable="YES"/>
+        <attribute name="list_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="child_tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Tasks" inverseName="parent_list" inverseEntity="Tasks" syncable="YES"/>
     </entity>
     <entity name="Tasks" representedClassName="Tasks" syncable="YES">
         <attribute name="task_name" optional="YES" attributeType="String" defaultValueString="nil" syncable="YES"/>

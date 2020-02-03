@@ -12,7 +12,7 @@ import CoreData
 class ViewController: UIViewController {
     
     var list = [Lists]()
-    var person = [Lists]()
+    //var person = [Lists]()
     var selectedList : Int = 0
     @IBOutlet weak var tableView: UITableView!
     
@@ -71,6 +71,23 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         selectedList = indexPath.row
         performSegue(withIdentifier: "showTasks", sender: self)
 
+    }
+    
+    // Delete item
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //
+            var selected = Lists(context: PersistenceService.context)
+            selected = list[indexPath.row]
+            
+            print(selected)
+            PersistenceService.context.delete(selected)
+            //list.remove(at: indexPath.row)
+            PersistenceService.saveContext()
+            print("Delete")
+            self.tableView.reloadData()
+
+        }
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
