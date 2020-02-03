@@ -45,11 +45,6 @@ class ViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
-    
-    
-
-
-
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -72,7 +67,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(list[indexPath.row].list_name as Any)
-        print(list[indexPath.row].child_tasks)
+        print(list[indexPath.row].child_tasks as Any)
         selectedList = indexPath.row
         performSegue(withIdentifier: "showTasks", sender: self)
 
@@ -86,7 +81,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 //    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let ListDetailsController = segue.destination as? ListDetailsController else {return}
-        ListDetailsController.list_name = list[selectedList]
+        ListDetailsController.list = list[selectedList]
         
     }
     

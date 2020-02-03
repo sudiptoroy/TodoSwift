@@ -11,22 +11,21 @@ import CoreData
 
 class ListDetailsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var list = [Lists]()
-    var tasks = [Tasks]()
-    var task = Tasks(context: PersistenceService.context)
+    //var list = [Lists]()
+    //var tasks = [Tasks]()
+    //var task = Tasks(context: PersistenceService.context)
     @IBOutlet weak var tableView: UITableView!
     
-    var list_name = Lists ()
+    var list = Lists (context: PersistenceService.context)
     var numberOfCellsTable:Int = 0
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(list_name)
+        print(list)
         // Do any additional setup after loading the view.
-        
-        
     }
+    
     @IBAction func onPlusTapped () {
         let alert = UIAlertController(title: "Add a task", message: nil, preferredStyle: .alert)
         alert.addTextField { (textField) in
@@ -37,26 +36,29 @@ class ListDetailsController: UIViewController, UITableViewDelegate, UITableViewD
             //let age = alert.textFields!.last!.text!
             let task = Tasks(context: PersistenceService.context)
             task.task_name = name
-            task.parent_list = self.list_name
-            self.list_name.addToChild_tasks(task)
+            task.parent_list = self.list
+            self.list.addToChild_tasks(task)
             
             PersistenceService.saveContext()
             //self.list.append(item)
-            self.tableView.reloadData()
+//            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        numberOfCellsTable = list_name.child_tasks?.count ?? 0
+        numberOfCellsTable = list.child_tasks?.count ?? 0
         return numberOfCellsTable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        print((list_name.child_tasks?.allObjects[indexPath.row] as! Tasks).task_name)
-        //cell.textLabel?.text =  (list_name.child_tasks?.allObjects[indexPath.row] as AnyObject).task_name
+        print((list.child_tasks?.allObjects[indexPath.row] as! Tasks).task_name as Any)
+        cell.textLabel?.text =  (list.child_tasks?.allObjects[indexPath.row] as! Tasks).task_name //(list_name.child_tasks?.allObjects[indexPath.row] as AnyObject).task_name
         //cell.textLabel?.text = (list_name.child_tasks?.allObjects[indexPath.row])
         return cell
     }

@@ -2,7 +2,7 @@
 //  Lists+CoreDataProperties.swift
 //  Todo
 //
-//  Created by Sudipto Roy on 1/29/20.
+//  Created by Sudipto Roy on 2/3/20.
 //  Copyright © 2020 Code-X Systems. All rights reserved.
 //
 //
